@@ -17,21 +17,39 @@
         5. 배너: http://frontendw.dothome.co.kr/assets/images/banner.jpg
     -->
 
-    <!-- 웹접근성: 장애인이나 고령자분들이 웹 사이트에서 제공하는 정보를 비장애인과 동등하게 접근하고 이용 할 수 있도록 보장하는 것 -> alt를 반드시 기록한다. -->
+    <!-- 웹접근성: 장애인이나 고령자분들이 웹 사이트에서 제공하는 정보를 비장애인과 동등하게 접근하고 이용 할 수 있도록 보장하는 것 -> *alt를 반드시 기록*한다. -->
     
     <!-- 폴더와 파일명 구분자는 /(슬래시) 이다. -->
     
-    <!-- 1. html문서보다 하위 폴더에 이미지가 있는 경우: 폴더1/폴더2/폴더3/.../파일명으로 쓴다. -->
+    <!-- 상대경로 지정방법 -->
+    <!-- HTML문서를 기준으로 이미지가 어디있는가를 찾는다. -->
+    <!-- 1. html문서보다 하위 폴더(문서 안에 있는 폴더나 파일)에 이미지가 있는 경우: 폴더1/폴더2/폴더3/.../파일명으로 쓴다. -->
+    <img src="assets/pic_trulli.jpg" alt="trulli">
+    <img src="assets/images/i2.jpg" alt="클러치백">
 
     <!-- 2. html문서와 이미지가 같은 폴더에 있는 경우: 파일 이름만 쓴다. -->
+    <img src="coffeebeans.jpg" alt="coffeebeans">
 
     <!-- 3. html문서보다 상위 폴더에 이미지가 있는 경우: ../../파일명으로 쓴다. -->
+    <img src="../workplace.jpg" alt="workplace">
 
     <hr>
-    <!-- 루트 폴더로 부터 경로 설정 -->
+    <!-- 루트 폴더로 부터 경로 설정 (*이미지가 현제에 있는 '작업영역 폴더' 기준으로 해당 이미지들이 어디 있는지 기록하는 방법. 실무에선 이 방법을 가장 많이 사용한다.*-->
+    <!-- 서버에서만 동작한다. 로컬은 동작 안함) -->
+    <img src="/50_html/assets/pic_trulli.jpg" alt="trulli">
+    <img src="/50_html/assets/images/i2.jpg" alt="클러치백">
+    <img src="/50_html/coffeebeans.jpg" alt="클러치백">
+    <img src="/workplace.jpg" alt="workplace">
 
     <hr>
-    <!-- 절대 경로 지정 방법 -->
-
+    <!-- 절대 경로 지정 방법 :대표 예시는 웹 서버의 ui주소를 지정하는 방식. html이 어느 위치에 있던 영향받지않는다. -->
+    <img src="http://frontendw.dothome.co.kr/assets/images/banner.jpg" alt="dress 1+1 보러가기">
+    <!-- 
+        비트맵 이미지:
+            1) jpg: 24bit 트루컬러
+            2)gif: 256 color , 움짤 (애니메이션 파일)
+            3)png: 24bit 트루컬러, 투명화 이미지
+     -->
+    <img src="https://src.hidoc.co.kr/image/lib/2022/11/15/1668491763670_0.jpg" alt="장모종 고양이">
 </body>
 </html>
