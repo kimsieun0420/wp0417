@@ -10,8 +10,13 @@
 
     <!-- 
         HTML 요소
-        1. 블록레벌요소 : <H1>~<H6> , <P>,hr,div 
-        2. 인라인 : B, STRONG,EM,I,MARK,small,sub,sup,ins,dell,br,span
+        1. 블록레벌요소 : 
+            1)위에서 아래로 세로 배치 (줄바꿈)
+            2)div, main, header, nav, article, aside, footer,
+            address,<H1>~<H6> , <P>,hr,div , ul, li from, table
+        2. 인라인 요소  : 
+            1) 왼쪽에서 오른쪽으로 가로 배치 (줄바꿈x)
+            B, STRONG,EM,I,MARK,small,sub,sup,ins,dell,br,span, input, select,button ...
      -->
 
 
@@ -19,12 +24,22 @@
 
     <h2>블록 레벨 요소</h2>
     <div>div1</div>
-    <div>div2</div>
-    <div>div3</div>
+    <h3>난 제목</h3>
+    <p>단락</p>
+    <ul><li>목록</li></ul>
+    <form><input type="text"></form>
+    <table><tr><td>표</td></tr></table>
+<hr>
 
     <h2>인라인 요소</h2>
     <span>span1</span>
-    <span>span2</span>
-    <span>span3</span>
+     <b>b</b>
+     <i>i</i>
+     <em>em</em>
+     <strong>strong</strong>
+     <a href="#"></a>
+     <input type="text">
+     <button>버튼</button>
+     <select name="" id=""><option value="">ffdfd</option></select>
 </body>
 </html>
