@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+/* 외부 CSS */
+
+body{
+    margin: 0px;
+}
+h1{
+    font-size: 40px;
+}
+h2{
+    color: white;
+    border: 7px solid violet;
+    border-bottom: 7px solid #754743;
+    background-color:thistle;
+}

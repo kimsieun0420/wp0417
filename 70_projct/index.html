@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUST쇼핑몰</title>
+</head>
+<body>
+    <!-- 
+        //id값 규칙//
+        첫글자는 영문자,-,_(숫자못씀)
+        두 번째 문자 부터 영문자,-,_,숫자
+        영문 대소문자 구별한다.
+        # = id
+        . = class
+    -->
+    
+
+
+    <div id="wrap">
+        <header>
+            <!-- logo -->
+            <h1><img src="images/logo.png" alt="JUST쇼핑몰"></a></h1>
+            <!-- navigation -->
+            <!-- nav>ul.main>li*4>a{메인메뉴$>}+ul.sub>li*4>a{서브메뉴}  -->
+            <nav>
+                <ul class="main">
+                    <li>
+                        <a href="#">탑></a>
+                        <ul class="sub">
+                            <li><a href="#">서브메뉴</a></li>
+                            <li><a href="#">서브메뉴</a></li>
+                            <li><a href="#">서브메뉴</a></li>
+                            <li><a href="#">서브메뉴</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">아우터></a>
+                        <ul class="sub">
+                            <li><a href="#">서브메뉴</a></li>
+                            <li><a href="#">서브메뉴</a></li>
+                            <li><a href="#">서브메뉴</a></li>
+                            <li><a href="#">서브메뉴</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">팬츠></a>
+                        <ul class="sub">
+                            <li><a href="#">서브메뉴</a></li>
+                            <li><a href="#">서브메뉴</a></li>
+                            <li><a href="#">서브메뉴</a></li>
+                            <li><a href="#">서브메뉴</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">악세서리></a>
+                        <ul class="sub">
+                            <li><a href="#">서브메뉴</a></li>
+                            <li><a href="#">서브메뉴</a></li>
+                            <li><a href="#">서브메뉴</a></li>
+                            <li><a href="#">서브메뉴</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header><!-- //header -->
+        
+        <div id="slide">
+            <ul>
+                <li><a href="images/slide1.jpg"><img src="images/slide1.jpg" alt="슬라이드 이미지1"></a></li>
+                <li><a href="images/slide2.jpg"><img src="images/slide2.jpg" alt="슬라이드 이미지2"></a></li>
+                <li><a href="images/slide3.jpg"><img src="images/slide3.jpg" alt="슬라이드 이미지3"></a></li>
+            </ul>
+        </div><!-- //#slide -->
+
+        <!-- contents -->
+        <div id="contents">
+            <!-- 공지사항/갤러리 -->
+            <div class="taps">
+                <ul>
+                    <li><a href="#tab1">공지사항</a></li>
+                    <li><a href="#tab2">갤러리</a></li>
+                </ul>
+                <div id="tab1">
+                    <ul>
+                        <li><a href="#"><span>제목1</span>2023-04-27</a></li>
+                        <li><a href="#"><span>제목2</span>2023-04-27</a></li>
+                        <li><a href="#"><span>제목3</span>2023-04-27</a></li>
+                        <li><a href="#"><span>제목4</span>2023-04-27</a></li>
+                    </ul>
+                </div><!-- //#tab1 -->
+                <div id="tab2">
+                    <a href="#"><img src="images/gallery1.jpg" alt="갤러리이미지1"></a>
+                    <a href="#"><img src="images/gallery2.jpg" alt="갤러리이미지2"></a>
+                    <a href="#"><img src="images/gallery3.jpg" alt="갤러리이미지3"></a>
+                </div><!-- //#tab2 -->
+            </div><!-- //.공지사항/갤러리 -->
+
+            <!-- 배너 -->
+            <div class="banner">
+                <a href="#"><img src="/70_projct/images/banner.jpg" alt="배너"></a>
+            </div> <!-- //.배너 -->
+
+            <!-- 바로가기 -->
+            <div class="shorcut">
+                <a href="#"><img src="/70_projct/images/shortcut.jpg" alt="바로가기"></a>
+            </div><!-- //.바로가기 -->
+        </div><!-- //contents -->
+
+        <!-- footer -->
+        <footer>
+            <!-- logo -->
+            <div class="b_logo"></div>
+            <a href="#"><img src="images/b_logo.png" alt="하단로고"></a>
+            <!-- address/coptright -->
+            <!-- 다중커서 : 알트+클릭 -->
+            <div class="coppy">
+                <p>서울특별시 중앙로 223 2F JUST 쇼핑몰</p>
+                <p>COPYRIGHT BY TBBROTHER. ALL RIGHTS RESERVED.</p>
+            </div>
+
+            <!-- sns -->
+            <div class="sns">
+                <a href="#">페이스북</a> |
+                <a href="#">인스타그램</a> |
+                <a href="#">트위터</a>
+            </div><!-- //.sns -->
+
+        </footer><!-- //footer -->
+    </div> <!--//#wrap -->
+</body>
+</html>
