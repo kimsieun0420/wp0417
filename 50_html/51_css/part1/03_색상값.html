@@ -8,20 +8,78 @@
     <style>
         /* 140개 영문 키워드: https://www.w3schools.com/colors/colors_names.asp */
 
+        /* 
+
+        2진수 :0,1
+        8진수 :0~7
+        16진수 :0~9, A~F
+        10진수 : 0~9
+
+        */
+
         /* HEX: 16진수 -> 0~9, A~F */
-        /* #RRGGBB 또는 #RGB */
+        /* #RRGGBB 또는 #RGB -> 빛의 혼합 */
+        /* 
+        6자 , 3자
+            #000000->검정 black = #000
+            #ffffff->흰색 white = #fff
+            #ff0000->빨강 red = #f00
+            #0000ff->파랑 blue = #00f
+            #ffff00->노랑 yellow = #ff0 
+            #ff00ff->자주 majanta? = #f0f 
+        */
+
+        /* 
+                <!--HTML 주석 -->
+                /* CSS 주석 */
+        */
 
         /* rgb(0~255, 0~255, 0~255) */  
+        /* 
 
-        /* rgba(0~255, 0~255, 0~255, 0~1) */
+            rgb(0,0,0)
+            rgb(255,255,255)
+            rgb(255,255,0)
+            rgb(255,0,0)
+
+        */
+
+        /* rgba(0~255, 0~255, 0~255, 0~1)
+
+        rgba(R, G, B, alpha)
+        alpha는 투명도 (0: 투명, 1:불투명, 0.5:반투명)
+        rgba(0,0,0,0.5)
+        콤마(,) 사이 공백 생략가능
+        0.5에서 소수점 앞의 0 생략가능
+        rgba(255,0,0,.5)
+        */
 
         /* hsl(0~359, 0~100%, 0~100%) */
+        /* 
+            hsl(Hue, Saturation, Lightness 색상,채도, 명도)
+            hsl(각도, 백분율% (숫자%), 백분율% (숫자%)
+            hsl(0,100%,50%)
+
+        */
         
         /* hsla(0~359, 0~100%, 0~100%, 0~1) */
+        /* 
+            hsla( H 색상, S 채도, L 명도, alpha)
+            alpha(0: 투명, 1:불투명, 0.5:반투명)
+            hsla(0,100%,50%,.5)
+        */
+
+        .colorName {color: red;}
+        .colorHex {color: #ff0000;}
+        .colorRgb {color: rgb(255, 0, 0);}
+        .colorRgba {color: rgba(255, 0, 0, 0.507);}
+        .colorHsl {color: hsl(0, 100%, 50%);}
+        .colorHsla {color: hsla(0, 100%, 50%, 0.5);}
 
     </style>
 </head>
 <body>
+    
     <h1>CSS 색상 값</h1>
     <p class="colorName">red</p>
     <p class="colorHex">#ff0000</p>
