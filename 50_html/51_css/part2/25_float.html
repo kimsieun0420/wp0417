@@ -11,19 +11,43 @@
             height:150px;
         }
 
+        /* 
+            레이아웃(Layout, 배치)
+
+            1.float -> .display:flex;
+            2. position: 요소를 겹치거나 움직임
+            
+
+            //블록레벨 요소를 가로배치//
+            //공중부양 (부유)//
+            float : left;
+            float : right;
+            float : none;
+
+            //플롯 처리한 요소의 영향을 받지 않게 하기 위함//
+            clear : left;
+            clear : right;
+            clear : both; <일반적으로 이걸 씀. 왼/오 동시적용되어서.
+            
+            overflow : hidden;
+            */
+
         /* (1) .div1의 float를 left로 지정하시오. */
         .div1 {
+            float: left;
             background:lightblue;
             /* width의 기본값이 콘텐츠크기로 바뀐다. */
         }
 
         /* (2) .div2의 float를 right로 지정하시오. */
         .div2 {
+            float: right;
             background: lightcoral;
         }
 
         /* (3) .div3의 clear 속성을 both로 지정하시오. */
         .div3 {
+            clear: both;
             background: lightgoldenrodyellow;
             /* 상위 요소의 float 효과를 제거 */
         }
@@ -33,6 +57,8 @@
     <h1>플로트</h1>
     <div class="div1">박스1</div>
     <div class="div2">박스2</div>
-    <div class="div3">박스3</div>
+    <div class="div1">박스3</div>
+    <div class="div2">박스4</div>
+    <div class="div3">박스5</div>
 </body>
 </html>
