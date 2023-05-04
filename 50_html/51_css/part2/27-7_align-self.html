@@ -10,11 +10,13 @@
         .container {
             display: flex;
             flex-wrap: wrap;
-            border:1px solid orange;
+            border:3px solid orange;
         }
 
         .container div {
             background-color: gray;
+            border:1px solid rgb(23, 255, 42);
+            color: white;
         }
 
         /* 교차축 세로 */
@@ -30,15 +32,26 @@
         .ass {align-self: stretch;}
 
         /* (1) .asfs에 플렉스 아이템을 교차축의 시작에 정렬하기 위해 속성을 지정하시오. */
+        .asfs{
+            align-self: flex-start;
+        }
 
 
         /* (2) .asfe에 플렉스 아이템을 교차축의 끝에 정렬하기 위해 속성을 지정하시오. */
-
+        .asfe{
+            align-self: flex-end;
+        }
 
         /* (3) .asc에 플렉스 아이템을 교차축의 가운데 정렬하기 위해 속성을 지정하시오. */
+        .asc{
+            align-self:center ;
+        }
 
 
         /* (4) .asb에 플렉스 아이템을 텍스트 아래 기준선에 맞춰 정렬하기 위해 속성을 지정하시오. */
+        .asb{
+            align-self: baseline; /* 베이스라인: 니가 어도비 일러(ai) 텍스트 쓰는 도중 하단에 보이는 가상 선임. */
+        }
 
 
         .asb1 {font-size: 3rem;}
