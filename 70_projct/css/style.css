@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: none;
+    box-sizing: border-box; 
+}
+
+img{
+    width: 100%;
+}
+
+#wrap{
+    width: 1200px;
+    margin: 0 auto; /*  width 지정 후 margin: 0 auto; 하면 바로 가운데 배치됨. */
+}
+
+header{
+    display: flex;
+    height: 100px;
+    justify-content: baseline;
+
+}
+
+/* 네비게이션 */
+.main{
+    display: flex; /* 부모요소 가로배치 */
+   
+}
+
+#slide{
+    height: 300px;
+    overflow: hidden;
+}
+
+#contents{
+    height: 200px;
+    display: flex;
+}
+#contents > div{
+    width: 400px;
+}
+
+#tab2 img{
+    width: 110px;
+    margin-left: 12px;
+}
+
+footer{
+    height: 100px;
+    display: flex;
+    background-color:#fafad2 ;
+}
+
+
+.logo{
+
+}
+

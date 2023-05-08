@@ -11,12 +11,21 @@
             font-style: italic;
             font-weight: bold;
             font-size: 16px;
-            line-height: 1.6;
+
+            line-height: 1.6; /* 줄간격. 크기/줄간격 순으로 써야함.     
+             //예시//)   16px/1.6 = 글자 크기의 1.6배 */
+
             font-family: 'Courier New', Courier, monospace;
         }
+        .font2{
+            font: bold italic 16px/1.6 'Courier New', Courier, monospace;
+        }
 
-        /* font: [스타일] [굵기] 크기[/줄간격] 글꼴; */
-
+        /* 
+            //속기형//
+        font: 크기 글꼴; 
+        font: [스타일] [굵기] 크기[/줄간격] 글꼴; 
+        */
         
     </style>
 </head>

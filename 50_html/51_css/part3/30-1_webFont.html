@@ -7,6 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        /*  @import는 @font-face보다 항상 맨 위에 있어야 적용이 된다. */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap');
+
+        @font-face {
+            font-family: 'SeoulNamsanM';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');
+            font-weight: normal; /* 글자 굵기 */
+            font-style: normal; /* 글자 기울기 */
+
+            font-family: 'SeoulNamsanM'; 
+            src: url(../assets/font/SeoulNamsanL.ttf);
+        }
+
+        /*
+            웹에서 사용하는 글꼴 format: 
+                *.ttf/*.otf,*.woft,   /     *.eot <이건 이제 안쓰는 폰트형식 
+         */
+        
+        /* 
+        c:/windows/fonts
+        */
         /* @font-face {
             font-family: 'SeoulNamsanL';
             src: url('/51_css/assets/font/SeoulNamsanL.ttf');
@@ -15,17 +36,23 @@
             src: url('http://id.dothome.co.kr/font/SeoulNamsanL.ttf');
             src: url('/font/SeoulNamsanL.ttf');
         } */
-
+        
         /* 
-            CDN(Content Delivery Network, 콘텐츠 전송 네트워크)은 지리적으로 분산된 여러 개의 서버를 통해 웹 콘텐츠를 사용자와 가까운 곳에서 전송함으로써 전송 속도를 높입니다.
+        CDN(Content Delivery Network, 콘텐츠 전송 네트워크)은 지리적으로 분산된 여러 개의 서버를 통해 
+        웹 콘텐츠를 사용자와 가까운 곳에서 전송함으로써 전송 속도를 높입니다.
         */
-
+        
         /* .ff1에 구글 Noto Sans KR 폰트를 CDN 방식으로 지정해 보세요. */
-
-
+        .ff1 {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        
+        
         /* .ff2에 서울 SeoulNamsanL 폰트를 @font-face 규칙을 사용하여 지정해 보세요. */
-
-
+        .ff2 {
+            font-family: 'SeoulNamsanM',sans-serif;
+        }
+        
     </style>
 </head>
 
