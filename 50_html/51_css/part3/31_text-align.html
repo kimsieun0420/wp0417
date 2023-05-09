@@ -6,7 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
+        /* 
+            텍스트 관련 속성
+            corlr : 색
+            font-family 글꼴
+            font-size  크기
+            font-weight 굵기
+            font-style 기울임
+            font 굵기 기울임 크기/줄간격 글꼴; 
 
+            line-height 줄간격
+            leter-spacing 자간
+            word-spacing 어간
+
+            //이미지도 정렬 가능함//
+            text-aline 수평(가로) 정렬
+            vertical-aline 수직 정렬
+
+            text-decoration 꾸밈
+
+            text-indent 문단의 첫줄 들여쓰기
+            text-transform 대소문자 변환
+            text-shadow 텍스트 그림자
+            */
+
+            .tal {text-align: left;} /* 왼쪽 정렬 */
+            .tar {text-align: right;} /* 오른쪽 정렬 */
+            .tac {text-align: center;} /* 중앙 정렬 */
+            .taj {
+                text-align: justify;
+                /* justify 사용할때, 영문일경우 사이 공백을 촘촘하게 만들수 있음.
+                단어단위 줄바뀜을 글자단위 줄바꿈으로 바꿈. 한글은 안해도됨. 
+                justify 쓸땐 word-break: break-all; 을 같이써라 */
+                word-break: break-all; 
+            } /* 양쪽 맞춤 */
     </style>
 </head>
 <body>

@@ -6,15 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
-        /* 자동 줄 바꿈(o), Enter(x), sp/tab(x) */
-        .whn {white-space: normal;}
-        /* 자동 줄 바꿈(x), Enter(x), sp/tab(x) */
-        .whnw {white-space: nowrap;}
-        /* 자동 줄 바꿈(x), Enter(o), sp/tab(o) */
+        /*
+         white-space : 공백 
+            값: normal, nowrap, pre, pre-wrap, pre-line
+        
+            *한 칸 이상의 공백은 한 칸으로 인식한다.
+            기본으로 자동 줄바꿈 됨.
+        */
+
+
+        /* 자동 줄 바꿈(o), Enter(x), space/tab(x) */
+        .whn {white-space: normal;} 
+
+        /* 자동 줄 바꿈(x), Enter(x), space/tab(x) */
+        .whnw {white-space: nowrap;} 
+
+        /* 자동 줄 바꿈(x), Enter(o), space/tab(o) */
         .whp {white-space: pre;}
-        /* 자동 줄 바꿈(o), Enter(o), sp/tab(o) */
+
+        /* 자동 줄 바꿈(o), Enter(o), space/tab(o) */
         .whpw {white-space: pre-wrap;}
-        /* 자동 줄 바꿈(o), Enter(o), sp/tab(x) */
+
+        /* 자동 줄 바꿈(o), Enter(o), space/tab(x) */
         .whpl {white-space: pre-line;}
     </style>
 </head>
