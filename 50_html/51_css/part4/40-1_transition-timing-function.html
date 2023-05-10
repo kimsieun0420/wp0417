@@ -12,15 +12,16 @@
             margin:10px;
             background: red;
             transition: 1s;
+            color: white;
         }
         div:hover {
             width: 200px;
         }
         /* 느린 시작과 끝, 시작 속도가 마지막 속도보다 약간 빠름 */
         .trs1 {transition-timing-function: ease;}
-        /* 느린 시작 */
+        /* 느린 시작, 점점 빨라진다 */
         .trs2 {transition-timing-function: ease-in;}
-        /* 느린 끝 */
+        /* 느린 끝,점점 느려짐 */
         .trs3 {transition-timing-function: ease-out;}
         /* 느린 시작과 끝, 시작 속도가 마지막 속도보다 약간 느림 */
         .trs4 {transition-timing-function: ease-in-out;}
@@ -29,7 +30,7 @@
 
         /* cubic-bezier(n,n,n,n) */
         /* https://cubic-bezier.com/#.17,.67,.83,.67  */
-        .trs6 {transition-timing-function:cubic-bezier(1,-0.01,1,.07);}
+        .trs6 {transition-timing-function:cubic-bezier(1,.1,.57,.93);}
     </style>
 </head>
 <body>
