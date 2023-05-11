@@ -7,6 +7,7 @@
     <title>HTML+CSS</title>
     <style>
         div {
+            color: white;
             position: relative;
             width:100px;
             height:100px;
@@ -22,6 +23,9 @@
             background: red;
             left:0px;
         }
+
+        /* 반복횟수를 infinite로 지정하면 forward는 동작하지 않는다. 
+            왜냐면 포워드는 100%에서 멈추는건데, 인피니트는 무한동작 하는 속성이니깐...뭔말인지알지 */
         @keyframes move {
             0% {left:100px; background: blue;}
             100% {left:300px; background: green;}
@@ -31,7 +35,7 @@
         /* 시작(지연) -> 0% -> 100% -> 시작 */
         .anim1 {animation-fill-mode: none;}
         /* 시작(지연) -> 0% -> 100% */
-        .anim2 {animation-fill-mode: forwards;}
+        .anim2 {animation-fill-mode: forwards;} /* 해태제과 사이트 메인에서 구름이나 텍스트 애니효과와 같음. */
         /* 0%(지연) -> 100% -> 시작 */
         .anim3 {animation-fill-mode: backwards;}
         /* 0%(지연) -> 100% */

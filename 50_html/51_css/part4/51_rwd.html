@@ -8,33 +8,79 @@
     <title>RWD</title>
     <style>
         /* 
-            @meida [not|only] [mediatype] [and|,] (expressions) {
+            @charset :uft-8";
+            @import
+            @keyframes
+            @font-face
+
+            미디어쿼리의 작성 형식:
+            @meida [not|only] [미디어종류 (mediatype)] [and|,] (expressions) {
                 CSS-code;
             }
+
+            인데 사실상
+
+            @meida (조건)expressions {
+                CSS-code;
+            }
+            이렇게 사용.
+
+
 
             mediatype: all, screen, tv, projection, print, ...
             and: 그리고
             , : 또는
-            expressions: 조건으로 min-width, max-width, orientation, ...
+            조건 expressions: 조건으로 min-width, max-width, orientation, ...
         */
 
-        /* 데스크탑의 배경색은 blue, 테블릿의 배경색은 green, 폰의 배경색은 red이 되도록 반응형 웹을 만들어 보세요. 미디어쿼리의 중단점은 768, 1200으로 지정합니다. */
+        /* 데스크탑의 배경색은 blue, 테블릿의 배경색은 green, 폰의 배경색은 red이 되도록 반응형 웹을 만들어 보세요. 미디어쿼리의 중단점(breakpoint)은 768, 1200으로 지정합니다. */
 
-        /* phone */
-        
+        /*      @media screen and (조건){} */
+        /* phone: 최소크기가 767 이하 */
+    
+                body {background: red;}
+            .wrap div{
+                width: 90%;
+                height: 400px;
+                background: orange;
+                margin: 20px;
+            }
 
-        /* tablet */
+
+        /* tablet:최소크기가 768 이상 */
+        @media screen and (min-width:768px){
+            .wrap{
+                display: flex;
+                flex-wrap: wrap;
+            
+            }
+            body {background: green;}
+            .div1{flex: 45%;}
+            .div2{flex: 45%;}
+        }
 
 
-        /* desktop */
+        /* desktop:최소크기가 1200 이상 */
+        @media screen and (min-width:1200px){
+            body {background: blue;}
+            .wrap div{
+                flex: 30%;
+            }
+        }
 
 
     </style>
 </head>
-
 <body>
     <h1>미디어쿼리</h1>
     <p>뷰포트 설정과 미디어쿼리를 이용한 반응형 웹입니다.</p>
+    
+    <div class="wrap">
+        <div class="div1">박스1</div>
+        <div class="div2">박스2</div>
+        <div class="div3">박스3</div>
+    </div>
 </body>
+
 
 </html>

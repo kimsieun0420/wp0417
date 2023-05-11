@@ -8,10 +8,16 @@
     <title>HTML+CSS</title>
     <style>
         .outer {
+            /* width: 100px; 으로 설정하면 시점이 중앙으로 바라보는거로 됨.*/
             border: 1px solid black;
-            /* perspective는 관점 속성으로 부모 요소에 지정한다. */
-            perspective: 1000px;
-            /* 관점의 위치로 perspective 속성과 함께 사용해야 한다. */
+            /* perspective는 관점 속성으로 부모 요소에 지정한다. 해줘야 3d(회전) 가능.
+                수를 작게 지정할수록 가깝게 다가와서 원근감이 지나침.
+                보통 800px으로 설정함.    
+            */
+            perspective: 800px;
+            /* 관점의 위치로 perspective 속성과 함께 사용해야 한다.
+                50% 50%가 기본값.    
+            */
             perspective-origin: 50% 50%;
             margin: 20px;
         }
@@ -57,6 +63,11 @@
 
         /* .outer에 마우스를 올렸을 때 .trftr의 위치를 가로로 100px 이동되게 하시오.
             기본값 0 */
+            .outer { overflow: hidden;}
+        .trftr {
+            transform: translateX(-100px);
+        }
+
         .outer:hover .trftr{
             /* transform: translate(100px, 0); */
             transform: translateX(100px);
@@ -71,19 +82,40 @@
 
 
         .trfro {
-            /* 변환의 기준 */
-            transform-origin: 0 0;
+            /* 변환의 기준 50%가 기본 값. 중심에서 회전됨.*/
+            /*
+
+                transform-origin: x y;
+                    값: px, % 
+                    x축: left, right, center 
+                    y축: top, bottom, center 
+             
+             */
+            transform-origin: (0, 0); 
         }
         /* .outer에 마우스를 올렸을 때 .trfro를 60도 회전되도록 지정하시오. */
+        .outer:hover .trfro {
+            transform: rotate(60deg);
+        }
 
 
         /* .outer에 마우스를 올렸을 때 .trfrox를 x축 기준으로 60도 회전되도록 지정하시오. */
+        .outer:hover .trfrox {
+            /* transform: perspective(200px) rotateX(60deg); */
+            transform: rotateX(60deg);
+        }
 
 
         /* .outer에 마우스를 올렸을 때 .trfroy를 y축 기준으로 90도 회전되도록 지정하시오. */
+        .outer:hover .trfroy {
+            transform: rotateY(90deg);
+        }
 
 
         /* .outer에 마우스를 올렸을 때 .trfsk를 y축 기준으로 10도 기울이시오. */
+        .outer:hover .trfsk {
+            transform: skewY(10deg);
+        }
 
 
     </style>
