@@ -13,15 +13,26 @@
     <script>
         /* 
             산술 연산자: +(문자열 결합)
+            숫자 + 숫자면 수학적 계산으로 더하는데,
+            문자 +문자면 걍 글자처럼 나열 한다는 말이란다. 
         */
 
         var t1 = '학교종이';
         var t2 = ' 땡땡땡';
         var t3 = 8282;
-        var t4 = ' 어서 모이자';
+        var t4 = '어서 모이자';
         var result;
-
-        document.write(result);
+        result = t1 + t2 + t3 + t4; 
+        document.write(result), '<br>';
+        
+        
+                // 숫자+문자 인데 문자가 하나라도 포함되면 무조건 그냥 나열.
+                //숫자+숫자 = ㄹㅇ 더함
+                /* 숫자+숫자+숫자+문자 = 숫자끼리 더한 후에 문자랑 나열. 
+                    -예: 2+2+2+야호 = 6야호 
+                    */
+        result = t3 + t3 ; 
+        document.write(result), '<br>';
         
     </script>
 </body>
