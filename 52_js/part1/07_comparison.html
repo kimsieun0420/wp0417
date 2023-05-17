@@ -13,19 +13,41 @@
     <script>
         /* 
             비교 연산자: >(초과), <(미만), >=(이상), <=(이하), 
-                        ==(같다), !=(다르다), ===(데이터와 데이터 유형이 모두 같다), 
-                        !==(데이터 또는 데이터 유형이 다르다)
+                        ==(같다)->데이터 유형이 달라도, 값만 같으면 참이다.
+                        !=(다르다) ->데이터 유형이 달라도, 값만 다르면 거짓이다.
+
+                        //이 밑에걸로 가급적 하는게 나음.
+                        ===(데이터와 데이터 유형이 모두 같다. ) 데이터 유형 구분함.
+                        !==(데이터 또는 데이터 유형이 다르다)데이터 유형 구분함.
+
+            비교연산의 결과는 true진실 혹은 false거짓 이다. 
         */
 
         var a = 10;
         var b = 20;
-        var c = 10;
-        var f = '20';
+        var str = '20';
         var result;
 
+        result = a > b; //a(10),b(20)가 같냐? -> 아니라서 false
+        document.write(result, '<br>');
+        result = a < b; //a,b가 서로 다르냐? -> 맞아서 true
+        document.write(result, '<br>');
+        result = a >= b; //a가 b보다 크거나 같냐? -> 맞아서 true
+        document.write(result, '<br>');
+        result = a <= b; //a가 b보다 크거나 같냐? -> 맞아서 true
+        document.write(result, '<br><br>');
+
+        //str은 문자열20, b는 숫자열 20이다.
+        result = str == b; //데이터 유형 구분 안해서 숫자만 같으면 참.
+        document.write(result, '<br>'); 
+        result = str != b; 
+        document.write(result, '<br>');
+        result = str === b; //데이터 유형도 구분해서 다르면 거짓으로됨.
+        document.write(result, '<br>');
+        result = str !== b; //20과 20은 데이터 유형이 다르지? ->응. true.
         document.write(result, '<br>');
 
-        
+
     </script>
 </body>
 

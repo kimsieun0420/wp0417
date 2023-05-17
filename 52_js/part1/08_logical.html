@@ -1,21 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head>      
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML+JS</title>
+    <title>HTML+JS</title>          
 </head>
 
 <body>
     <h1>연산자</h1>
     <script>
         /* 
-            논리 연산자: ||(또는), &&(그리고), !(아니다)
+            피연산자(연산의 대상) : 1+2일경우 1과2가 피연산자라는 뜻임.
+            단항 연산자: **, --,! (피연산자가 하나), -3(음수)
+            이항연산자 : +, -, *, /, %, **,>, >=, <=,||,&&...
+            삼항 연산자: ? : *삼항이란 피연산자가 3개라.
+                -조건식 ? 코드1 : 코드2; 는 결국  피연산자1 ? 피연산자2 : 피연산자3 
+
+
+            1+2 
+            a++, ++a
+            !true (음수마냥 느낌표는 무조건 앞에 있아여함.)
+            
+                논리 연산자: ||(또는), &&(그리고), !(아니다)
+                논리연산의 대상과 결과는 true 또는 false 이다.
+        
+
+            ||,&&,! 모두 앞뒤로 참 거짓만 올수잇단거야.
+
+            예시 )
+            빵 또는 과자 사줄게. -> 빵 사줌. = 참
+            둘 중 하나만 약속을 지켜도 참.
+            true || true -> true
+            true || falrs -> true
+            falrs || true -> true
+            falrs ||falrs -> falrs
+
+            예시 )
+            빵 하고 과자 사줄게. -> 빵만 사줌. = 거짓
+            둘 중 하나를 못지켜서 거짓.
+             true && true -> true
+            true && falrs -> falrs
+            falrs && true -> falrs
+            falrs &&falrs -> falrs
+
+            !true-> falrs   
+            !falrs-> !true
+
+
+            **연산자의 우선순위 (밑에 모르겠으면 최소 이거라도 외우렴.)
+            1.()
+            2. 산술
+            3.비교
+            4.논리 && ||
+            5.대입(할당)
             
             연산자의 우선순위
-            18. ()
+            18. ()  //예시 : (2+5) * 2 = 14 일때 괄호 먼저 계산하는거랑 같은 원리임.
             15. 산술(증감): ++, --
             14. 논리: !
             14. typeof
@@ -28,7 +70,8 @@
             03. 논리: ||
             02. 대입(할당): =, +=, -=, *=, /=, %=, **=
             02. 삼항(조건): ? :
-            * 왼쪽에서 오른쪽 방향으로 계산
+            * 연산의 우선순위가 같다면 왼쪽에서 오른쪽 방향으로 계산 
+                예) 1+2+3+4 = 10 모두 +기라서 연산이 같으니 걍 순서대로 한다는 뜻임.
 
             우선순위 참고: https://www.w3schools.com/js/js_precedence.asp 
         */
@@ -39,6 +82,13 @@
         var n = 40;
         var result;
 
+        result = a > b || a < b; //a가b보다 큰거 또는 a가 b보다 작다. 
+        document.write(result, '<br>');
+
+        result = a > b && a < b; //a가b보다 커. 그리고 a가 b보다 작다.  
+        document.write(result, '<br>'); 
+
+        result = !(a > b); //a가 b보다 크냐? -> 괄호 안의 문제가 거짓이라 !는 청개구리라 반대로 트루가됨.
         document.write(result, '<br>');
         
     </script>
