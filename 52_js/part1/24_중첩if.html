@@ -19,6 +19,7 @@
             }
         */
 
+        //데이터베이스에 저장된 자료를 가져와서 검사하는 단계가 이것. 데이터베이스 관리는 개발자 담당임.
         var id = 'easy1004';
         var pw = '112233';
 
@@ -31,6 +32,8 @@
             } else {
                 alert('비밀번호가 일치하지 않습니다.');
                 // 브라우저 새로고침
+                //객체 : window, document, console, location
+                //location(현재) reload(돌아가다) : 현재 위치에서 처음으로 다시 돌아감. 
                 location.reload();
             }
         } else {
