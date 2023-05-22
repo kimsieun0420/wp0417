@@ -6,21 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS+JS</title>
-    <style>
-        .blue {color:blue;}
-        .red {color:red;}
-    </style>
+
 </head>
 
 <body>
     <h1>for</h1>
     <script>
         /* 
+            ver 변수 = 초깃값; <- 이것이 바로 for의 초기식.
+
+            while(조건식) {
+                코드;
+                증검식;
+            }
+
+
             for (초기식; 조건식; 증감식) {
                 코드;
             }
         */
 
+        var a = 1;
+        while(a <= 10) {
+            document.write('while반복' + a, '<br>');
+            a++;
+        }
+
+
+        //이게 더 많이 사용됨.
+        //실행하는 순서: 초기식->조건식->참일 경우 {코드;} -> 증감식 -> 조건식...거짓이 되었을때 멈춘다.
         for (var i = 1; i <= 10; i++) {
             document.write('반복' + i, '<br>');
         }
