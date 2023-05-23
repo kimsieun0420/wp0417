@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <h1>이미지 갤러리</h1>
+    <h1>이미지 갤러리 롤링</h1>
     <div id="galleryZone">
         <p>
             <!-- 인라인 스크립트 -->
@@ -19,46 +19,26 @@
         <p><img src="../assets/pic_1.jpg" alt="" id="photo"></p>
     </div>
     <script>
-        /* 
-
-                HTML의 이벤트 속성 : onclick = 클릭한다. 
-
-            return: 함수 호출문에 결괏값 반환하고 함수 종료
-
-            함수 정의
-                function 함수명() {
-                    코드;
-                    return 데이터(값);
-                }
-
-            함수 호출
-                var 변수 = 함수명();
-        */
-
+  
         var num = 1;
         function gallery(direct) {
             if (direct) {
-                if (num == 8) return; //8번째에서 멈춤. 
+                if (num == 8) num = 0; 
                 num++;
             } else {
-                if (num == 1) return; //1번째에서 더 뒤로 못감. 
+                if (num == 1) num = 8;
                 num--;
             }
+            console.log(num);//num이 제대로 동작하는지 확인하는 코드
+            
 
             var imgTag = document.getElementById('photo');
             imgTag.setAttribute('src', '../assets/pic_' + num + '.jpg');
             // imgTag.setAttribute('src', '../assets/pic_1.jpg'); 숫자만 변수처리 해줌. 
         }
 
-        /* 
-            //자바의 기본형식 다시보기
-            객체.메서드();
-            document.write();
-            document.getElementById('아이디명'); -> 문서에 아이디명에 해당하는 요소를 가죠온다.
-            객체.setAttribute('속성','값'); -> 기존에 있는 객체의 html 속성을 해당 값으로 지정한다.
+    
 
-
-        */
     </script>
 </body>
 

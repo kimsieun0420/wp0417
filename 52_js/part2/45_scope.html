@@ -14,11 +14,47 @@
         /* 
             스코프(Scope): 변수 또는 함수의 유효 범위
 
-            지역 변수(Local Variables)
+            변수 선언의 키워드
+            
+            var(재선언, 재할당) -> let(재할당) , const
+
+            
+            지역 변수(Local Variables)  = 뉴스 지역방송과 전국방송의 차이마냥 이해하면 편하다... 
                 - 스코프 영역에서 선언한 변수로 스코프 영역에서만 사용할 수 있다.
             전역 변수(Global Variables)
                 - 자바스크립트 모든 영역에서 사용할 수 있는 변수
         */
+
+        //변수선언 및 할당
+        //전역변수 
+        var a = 1;
+        //재선언 가능
+        var a ;
+        //재할당
+        a = 4;
+
+        let aa = 2;
+        //재선언 불가
+        // let aa (x)
+        //재할당
+        aa = 5;
+        document.write(a + a, '<br>');
+        
+        function myFn(){
+            //하단이 지역변수 = 함수 내부에서 선언 한 변수.
+            var b = 2;
+            document.write(b + b , '<br>');
+        }
+
+        function myFn2(){
+            //하단이 지역변수 = 함수 내부에서 선언 한 변수.
+            var c = 3;
+            document.write(c + c, '<br>');
+        }
+        
+        myFn();
+        myFn2();
+
 
 
 
