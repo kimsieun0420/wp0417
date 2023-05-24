@@ -1,0 +1,92 @@
+
+/* 초기화 */
+* {
+        margin: 0;
+        padding: 0;
+        
+}
+a{
+        text-decoration: none;
+        color: #1a1414;
+        text-align: center;
+}
+
+
+body {
+        margin: 0px;
+}
+
+/* 레이어아웃과 배경색 */
+img {
+        width: 100%;
+        vertical-align: top;
+}
+
+.wrap {
+        width: 1000px;
+}
+
+header {
+        height: 100px;
+        background: #ccc;
+}
+
+section {
+        height: 500px;
+        overflow: hidden;
+        position: relative;
+}
+
+footer {
+        height: 100px;
+        background: #555;
+        text-align: center;
+        line-height: 100px;
+}
+
+/* 로고 */
+
+.logo{
+        line-height: 100px;
+        text-align: center;
+}
+
+/* 메인타이틀 */
+
+h2{
+        position: absolute;
+        z-index: 9999; /* 텍스트가 미지 위로 올라오게 */
+        left:  50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size:  3rem;
+        text-shadow: 1px 1px 5px #ccc;
+        color: aliceblue;
+}
+
+/* 슬라이드 */
+ul {
+        height: 400%;
+        animation: slide 9s infinite;
+        position: absolute;
+        top: 0;
+        left:0;
+}
+
+li{
+        width: 1000px;
+        height: 500px;
+        overflow: hidden;
+}
+
+@keyframes slide {
+        0% {top:0}
+        5% {top:-100}
+        33% {top:-100%}
+        38% {top:-200%}
+        66% {top:-200%}
+        71% {top:-300%}
+        99% {top:-300%}
+        99.99% {top:-300%}
+        100% {top:0%}
+}

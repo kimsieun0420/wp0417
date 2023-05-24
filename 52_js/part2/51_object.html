@@ -32,8 +32,9 @@
             객체는 기능(메서드)과 속성을 가지고 있다.
 
             객체.메서드() -> 객체의 메서드를 실행한다.
+                window.promt();
                 document.write(); 
-                document.getElementById();
+                document.getElementById(); 
                 객체.setAttribute(); 
                 location.reload();
 
@@ -49,7 +50,7 @@
             객체의 종류
             1. 내장 객체(Built-in Object)
                 - 자바스크립트 엔진에 내장되어 있는 객체
-                - Date, Array, Math, String 등
+                - Object, Date, Array, Math, String 등
                 
             2. 브라우저 객체 모델(BOM, Browser Object Model)
                 - 브라우저에 계층 구조로 내장되어 있는 객체
@@ -59,9 +60,63 @@
                 - HTML 문서 구조
         */
 
-        // 내장 객체 생성
-        // 객체 생성 시 new 키워드와 생성함수를 사용한다.
-        // 참조변수(인스턴스명) = new 생성함수()
+        /*
+           내장 객체 생성
+           객체 생성 시 new(예약어임) 키워드와 생성함수를 사용한다.
+           변수를 객체(참조) 변수라 하며, 인스턴스 instance(사본)라 부른다. 
+          let 참조변수(인스턴스명) = new 생성함수();
+          객체내에 함수를 값으로하는 속성을 메서드라 한다.
+
+
+          
+          객체.메서드() = function(){};
+          객체.속성 = 값;
+  
+          객체 생성1
+          let 객체 = new 생성함수();
+          객체.속성 = 값;
+        객체.속성() = function(){};
+
+        //객체 생성2
+          객체 : {
+          속성 : 값,
+          속성 : function(){};
+          };
+  
+  
+          */
+
+
+       /* 
+        사용자 정의 객체 
+        tv 객체를 만든다고 가정하면 
+        this는 객체 자기 자신이란 뜻. 속성이 같으면 굳이 tv1,tv2 구분 안해도 this로 동일해줘도 됨 
+        = 그럼 동일값으로 적용되는거 아닌가용? 
+        = 아니에용 디스를 동일하게 쓰지만 밑에 let tv, let tv2 각각 따로 할당해유. 써보면 앎.
+        */
+
+        let tv = new Object();
+        tv.color = 'white';
+        tv.price = 300000;
+        tv.info = function (메개변수) {
+            document.write('tv 색상: ' + this.color, '<br>');
+            document.write('tv 가격: ' + this.price, '<br>');
+        };
+
+        tv.info();
+
+
+        let tv2 = {
+
+            color: 'pink',
+            price: 800000,
+            info: function () {
+                document.write('tv 색상: ' + tv2.color, '<br>');
+                document.write('tv 가격: ' + tv2.price, '<br>');
+            }
+        };
+
+        tv2.info();
 
 
 

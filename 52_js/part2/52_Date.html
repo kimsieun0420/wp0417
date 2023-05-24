@@ -13,9 +13,11 @@
     <script>
 
         /* 
-            참조변수 = new Date()
+            참조변수 = new(new가 연산자란 뜻) Date()
             참조변수 = new Date(연,월,일)
 
+
+            //날짜관련 메서드들 모음~//
             날짜 정보를 가져올 때(get)
             getFullYear(): 년
             getMonth(): 월(0:1월 ~ 11:12월)
@@ -40,6 +42,55 @@
             setTime()
         */
 
+        //날짜 객체 만들기이~
+        let d = new Date();
+        //출력
+        document.write(d, '<br>');
+        
+        let yy = d.getFullYear();
+        let mo = d.getMonth()+1; //0(1월) ~ 11(12월)이라 1더해야한대 
+        let dd = d.getDate();
+        
+        //숫자로 표시됨. 0(일) ~ 6(토)
+        let we = d. getDay();
+
+        let hh = d.getHours();
+        let nm = d.getMinutes();
+        let ss = d.getSeconds();
+
+
+        //we = 요일이 숫자로 표시되니까 그걸 요일로 지정해주는 방법
+        if (we === 0) {
+            we = '일요일';
+        } else if (we === 1){
+            we = '월요일';
+        } else if (we === 2){
+            we = '화요일';
+        }else if (we === 3){
+            we = '수요일';
+        } else if (we === 4){
+            we = '목요일';
+        } else if (we === 5){
+            we = '금요일';
+        } else {
+            we = '토요일'; //마지막이라 if 안하고 else만 쓰면 될듯...? 
+        }
+
+        document.write( '응애  ' + yy + '년 ' + mo + '월 ' + dd + '일(' + we + ')'  + hh + ':' + dd, '<br>');
+        document.write(mo, '<br>');
+        document.write(dd, '<br>');
+        document.write(hh, '<br>');
+        document.write(nm, '<br>');
+        document.write(ss, '<br>');
+        
+        
+
+        
+        d.getFullYear();
+        let year = d.getFullYear();
+        document.write(year, '<br>');
+        
+        
 
         
     </script>
