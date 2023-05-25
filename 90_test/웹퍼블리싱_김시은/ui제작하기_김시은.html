@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>슬라이드_김시은</title>
+
+    <style>
+        /* 초기화 */
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        /* 메인 타이틀 */
+        h2{
+            color: white;
+            font-size: 3em;
+            font-family: 'Times New Roman', Times, serif;
+            text-shadow: 1px 1px 5px #36a0ad;
+            text-align: center;
+            position: absolute;
+            z-index: 9999; 
+            left:50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            
+        }
+
+        img{
+            width: auto;
+            vertical-align: top;
+            
+        }
+
+        /* 슬라이드 */
+
+        section {
+            width: auto;
+            height: 500px;
+            overflow: hidden;
+            position: relative;
+            margin: auto;
+            align-items: center;
+        }
+
+        ul {
+            height: 500%;
+            animation: slide 9s infinite;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: auto;
+        }
+
+        li {
+            width: auto;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        @keyframes slide {
+            0% {
+                top: 0%
+            }
+
+            5% {
+                top: -100%
+            }
+
+            33% {
+                top: -100%
+            }
+
+            38% {
+                top: -200%
+            }
+
+            66% {
+                top: -200%
+            }
+
+            71% {
+                top: -300%
+            }
+
+            99% {
+                top: -300%
+            }
+
+            99.99% {
+                top: -300%
+            }
+
+            100% {
+                top: 0%
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <h2>
+            wave
+        </h2>
+        <ul>
+            <li><img src="images/slide_wave1.jpg" alt="slide_wave1"></li>
+            <li><img src="images/slide_wave2.jpg" alt="slide_wave2"></li>
+            <li><img src="images/slide_wave3.jpg" alt="slide_wave3"></li>
+            <li><img src="images/slide_wave1.jpg" alt="slide_wave1"></li>
+        </ul>
+    </section>
+</body>
+
+</html>
