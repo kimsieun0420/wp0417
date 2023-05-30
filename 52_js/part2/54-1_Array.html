@@ -22,9 +22,25 @@
         var arr_1 = ['사당', '교대', '방배', '강남'];
         var arr_2 = ['신사', '압구정', '옥수'];
 
+        // 연결문자 '-' 등등...
+        document.write (arr_1.join('-'), '<br>');
 
-
-    </script>
+        // 두 개 이상의 배열을 하나로 결합해 표시해줌. 
+        document.write (arr_1.concat(arr_2), '<br>');
+        
+        // ㄱㄴㄷㄹ , abcd 순서로 정렬해서 보여줌
+        document.write (arr_1.sort(), '<br>');
+        
+        // sort 순서를 거꾸로 정렬해서 보여줌
+        document.write (arr_1.reverse(), '<br>');
+        
+        // ()에 쓸수있는 인덱스 번호는 최대 2개까지 가능함. 
+        //var arr_1 = [사당 교대 방배 강남]일 경우 0,1,2,3 순서임. 
+        // (arr_1.slice(1,3) = 1~3 까지인데 3 이전이니까 방배랑 교대만 출력됨. 
+        document.write (arr_1.slice(1,3), '<br>');
+        
+        
+        </script>
 </body>
 
 </html>

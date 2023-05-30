@@ -22,16 +22,21 @@
         /* 
             indexOf('찾을문자'): 객체의 왼쪽부터 문자열을 찾아 최초 일치하는 index 번호 반환 (없으면 -1)            
             length: 문자열의 문자 총 개수 반환
+
+            //이메일 형식 // 
+            id@naver.com ... 보통의 아이디 + 사이트 주소지...   
         */
 
         var userEmail = prompt('당신의 이메일 주소는?', '');
+        //                1        2       3        4          5
         var arrUrl = ['.co.kr', '.com', '.net', '.or.kr', '.go.kr'];
 
         var check1 = false;
         var check2 = false;
-
+       
         if (userEmail.indexOf('@') > 0) {check1 = true;}
 
+        // 0 ~ 4 까지 5번 반복함
         for (var i = 0; i < arrUrl.length; i++) {
             if (userEmail.indexOf(arrUrl[i]) > 0) {
                 check2 = true;
