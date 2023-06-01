@@ -19,12 +19,34 @@
     <ul>
         <li>목록1</li>
         <li>목록2</li>
+        <li id="pink">목록24</li>
         <li class="red">목록3</li>
-        <li>목록4</li>
+        <li>목록4</li> 
     </ul>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
+
+/* 
+
+        CSS 선택자 -> 제이쿼리 선택자  
+        #id, .cass, tag , ... 
+        :eq() <제이쿼리 선택자. 
+*/
+
+        //선택자의 이름을 태그로
+        $('li').css({color: 'blue'});
+        $('body').css({background: '#be70fd41'});
+        // 선택자의 이름을 css로
+        $('.red').css({color: 'red'});
+        //아이디
+        $('#pink').css({color: 'pink'});
+        //this란 이벤트가 발생한 객체
+        $(this).메서드();
+
+        //window, document 는 자바스크립트의    DOM 객체이며, '', ""로 묶으면안됨. 
+        $(window).메서드();
+        $(document).메서드();
 
     </script>
 </body>

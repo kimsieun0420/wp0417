@@ -15,8 +15,43 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
         /* 
+            제이쿼리 메서드
+            1. 이벤트 메서드: click(), mousenter(), ...
+            2.탐색 메서드 ~ :선택자의 연장선
+                -parent('선택자') 부모
+                -children('선택자')자식
+
+
+                //형제 관련 선택자
+                -siblings('선택자')형제들
+             중요   -find('선택자') 괄호안에 들어가는 선택자의 하위요소(자식+손자)
+             중요  -eq(n) (숫자 0부터 시작함) n번째 형제중에 몇번째 선택할지?
+                -prev() 이전 형제
+                -next() 다음 형제
+
+
+                -not('선택자') 저기 괄호안에 있는 선택자 요소 제외한다는 뜻.
+
+            3. 효과 메서드
+
+            HTML DOM 요소를 선택하는 방법
+            1. 선택자: #id, .cass, 태그
+            2.탐색 메서드
+
+
+
             $('선택자').parent() ~ 부모 요소 선택
         */
+
+
+       /* 
+           //문제//
+           
+           .txt1 클래스의 부모를 선택하여
+           1px 두께의 red 실선 테두리를 지정하시오.
+       */
+
+       $('.txt1').parent().css({border : '1px solid red'});
 
         
 

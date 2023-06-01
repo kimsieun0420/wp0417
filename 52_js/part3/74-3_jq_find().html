@@ -18,8 +18,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
         /* 
-            $('선택자a').find('선택자b') ~ a의 하위 b요소 선택
+            //fimd는 칠드런처럼 괄호()가 비면 모두 선택하는게 아님. 안통한단 이야기임.
+            $('부모').find('자식') ~ 부모의 자식 요소 선택
+            $('조상').find('하위') ~ 조상의 하위 요소 선택
         */
+
+        /* 
+            ul의 하위 요소인 em을 선택하여
+            테두리를 '1px solid red'로 지정하시오.
+        */
+
+
+        //칠드런보다 이게 더 자주 사용됨.
+        $('ul').find('em').css({border: '1px solid red'});
+
 
     </script>
 </body>
