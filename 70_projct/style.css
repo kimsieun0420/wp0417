@@ -55,7 +55,7 @@ footer {
 
 h2{
         position: absolute;
-        z-index: 9999; /* 텍스트가 미지 위로 올라오게 */
+        z-index: 9999; /* 텍스트가 이미지 위로 올라오게 */
         left:  50%;
         top: 50%;
         transform: translate(-50%, -50%);
@@ -80,8 +80,8 @@ li{
 }
 
 @keyframes slide {
-        0% {top:0}
-        5% {top:-100}
+        0% {top:0%}
+        5% {top:-100%}
         33% {top:-100%}
         38% {top:-200%}
         66% {top:-200%}

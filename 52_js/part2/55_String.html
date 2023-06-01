@@ -17,6 +17,8 @@
         */
 
         var s = new String('hello javascript');
+
+        // 이거 쓰는게 편함
         var s2 = 'hello javascript';
 
         /* 
@@ -41,7 +43,13 @@
             trim(): 문자열 앞 또는 뒤에 공백 문자열 삭제
         */
 
+        //                이쪽 you를 먼저 찾음
         var str = 'Hello Thank you good luck to you';
+
+        document.write(str.indexOf('you'),'<br>');
+        document.write(str.substr(12,3),'<br>');
+        document.write(str.toUpperCase(),'<br>');
+        document.write(str.charCodeAt(8),'<br>');
 
 
 

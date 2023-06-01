@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        div {
+            float: left;
+            width: 200px;
+            height: 200px;
+            margin: 50px;
+        }
+        .box1 {
+            background: blue;
+        }
+        .box2 {
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+
+
+    <!-- 내 컴퓨터에 연결 / 웹디자인 기능사 시험용으로 주로 사용(인터넷 안써도 ㄱㅊ아서...) -->
+    <script src="jquery-3.7.0.min.js"></script>
+
+
+    <!-- CDN방식 : 네트워크 연결해서 쓰는 방식. 보통 이방식으로 함. 주소 끌어오면됨.
+    실무 또는 웹디 기능사에 사용. -->
+    <!-- 제이쿼리 사이트 CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script> 
+    <!-- 구글연결 CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+
+        /*
+
+           // 배우는거 다시 정리 //
+        
+            자바스크립트
+                1. 용어: 객체, 메서드, 속성
+                2. 변수
+                3. 데이터
+                4. 연산자
+                5. 제어문
+                6. 함수
+                7. 객체(메서드,속성)
+                8. 이벤트
+
+
+            제이쿼리 : 자바스크립트의 라이브러리 역할. 자바스크립드로 만든 메서드를 배움.
+                객체(메서드,속성) 이것들...이 해당사항.
+                1. 이벤트 처리방식 
+                2. 선택자(폴더 3의 73번), 탐색 메서드(폴더3의 74번)
+                3. -HTML/CSS 메서드
+                    -attr(),css()
+                4. 효과 메서드 (폴더3의 76번)
+                5. 기타 메서드
+                6. 플러그인 프로그램
+                    -캐로셀
+
+        
+        */
+
+        /* 
+
+            제이쿼리 사용법
+
+            1. 제이쿼리 라이브러리 파일 연결
+                -다운로드 (https://jquery.com/ 여기에서 다운)
+                -CDN방식
+
+            2. body말고 head 사이에 스크립트 사용할 경우엔 준비 이벤트가 필요함.
+            3. 코드작성
+
+
+            //코드작성
+            
+            객체. 메서드();
+
+            객체: $('선택자') 
+            메서드: css()
+            선택자: #id,.class, 테그 ... 
+
+
+            $('선택자').css({속성명: 값});
+
+            //속성 값 표현방법//
+             css()   
+             css({속성명: 값,...}) 
+
+        */
+       /* 
+            js로 빨간색 상자의 크기를 가로/세로 모두 300px로 지정하시오.
+       */
+      //문자열은 ''로 묶는다.
+      //속성은 '' , "" 생략가능
+      //값은 단위 생략하면 기본 px로 인식.
+      $('.box2').css({width:300, height:300});
+
+    </script>
+
+
+</body>
+
+</html>
