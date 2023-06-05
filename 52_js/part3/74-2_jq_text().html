@@ -35,9 +35,57 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
         /* 
-            $('선택자').text(); ~ 문자열 반환
-            $('선택자').text('문자열'); ~ 문자열 설정
+               이벤트 메서드
+            탐색 메서드
+                html/css 메서드 
+                text()
+                html()
+                atter()
+                css()
+
+            효과메서드 (76번) -> 내비게이션, 슬라이드 이미지 등 제작가능함
+                hide()
+                show()
+                fadeIn()
+                slidDown()
+                slidup()
+                anlmation()
+                stop()
+
+
+            $('선택자').text(); ~ 문자열 가져오기(html 태그를 문자열로 인식)
+            $('선택자').text('문자열'); ~ 문자열 지정하기
+
+            $('선택자').html(); ~ 문자열 가져오기(html 태그를 요소로 인식)
+            $('선택자').html('문자열'); ~ 문자열 지정하기
         */
+
+        /* 
+            색상 이름의 목록 중 하나를 클릭하면
+            박스의 색의 컬러가 변경되고, -> css()
+            색상 이름이 박스에 표시되도록 하시오. -> text(), html()
+        */
+
+        /* 
+        
+            css({속성 값})
+        */
+
+        //li를 클릭하면 함수를 실행
+        $('li').click(function(){
+            //$(this)란 클릭한 li 내용(문자열)을 가져와서 tet변수에 할당
+            let txt = $(this).text();
+            //div의 내용을 txt로 지정한다
+            $('div').text(txt);
+            //div의 배경색을 txt로 한다.
+            $('div').css({background: txt});
+        });
+
+            
+            
+            
+           
+        
 
     </script>
 </body>

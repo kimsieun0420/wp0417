@@ -10,7 +10,7 @@
         div {
             width: 300px;
             height: 300px;
-            background: blue;
+            background-color: blue;
             margin: 100px auto;
         }
     </style>
@@ -19,12 +19,48 @@
 <body>
     <div></div>
 
+    <!-- 제이쿼리 라이브러리 파일 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    
+    <!-- 제이쿼리 UI 라이브러리 파일  
+    용도 : 배경 색상은 애니메이트 되지 않는다.  -->
+    <!--  https://jqueryui.com/ <여기서 다운하거나,
+          https://cdnjs.com/ 에서 jqueryui 검색해서 cdn 방식으로 붙여넣으람.   -->
+    <!-- 30가지가 넘는 다양한 가속도 지정가능 https://jqueryui.com/easing/ 가속도 머시기 참고 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <script>
-        /* 
-            $('선택자').animate({속성: 값}, 시간, '가속도') ~ 요소에 애니메이션 적용
+        /*
+
+            요소에 애니메이션 적용
+        
+
+            $('선택자').css({속성: 값}) 
+                                           400 = 가속도 기본 설정
+            $('선택자').animate({속성: 값},400, 'swing') 
+
+            $('선택자').animate({속성: 값}, 시간, '가속도'}) 
+            가속도:swing(가속), linear(등속)
         */
+       
+        /* 
+           문제 : 
+
+           파란색 박스 위에 마우스를 >올리면< 
+           박스의 크기를 기존의 300px에서 가로세로 500px로 
+           애니메이트 되게 지정해라. 
+
+        */
+
+        // 파란색 박스 위에 마우스를 
+        //>올리면< = .mouseenter     실행한다 = function
+        $('div').mouseenter(function(){
+            $(this).stop().animate({width: 500, height: 500, backgroundColor: 'red'},400, 'easeOutElastic');
+        });
+        $('div').mouseleave(function(){
+            // $(this).stop().animate({width: 300, height: 300, backgroundColor: 'blue'},400, 'easeOutElastic');
+            // $(this).stop().animate({width: 300, height: 300, backgroundColor: 'blue'},400, 'easeOutBack');
+            $(this).stop().animate({width: 300, height: 300, backgroundColor: 'blue'},400, 'easeOutExpo');
+        });
 
     </script>
 </body>

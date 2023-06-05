@@ -22,15 +22,14 @@
 
         $('button').click(function(){
             newRegister();
+
+            let subject = $('#subject').val();
+    
+            $('#itemList').append('<li>' + subject + '</li>');
+    
+            $('#subject').val('');
         }); 
 
-        function newRegister() {
-            let subject = $('#subject').val();
-
-            $('#itemList').append('<li>' + subject + '</li>');
-
-            $('#subject').val('');
-        }
     </script>
 </body>
 
