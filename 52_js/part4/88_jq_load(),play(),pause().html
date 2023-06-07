@@ -8,7 +8,7 @@
     <title>HTML+CSS+JS</title>
     <style>
         .box {
-            width: 800px;
+            width: 400px;
         }
         .box video {
             width: 100%;
@@ -25,7 +25,7 @@
 <body>
     <div class="box">
         <video>
-            <source src="../assets/mov_bbb.mp4" type="video/mp4">
+            <source src="/50_html/assets/video/mov_bbb.mp4" type="video/mp4">
         </video>
     </div>
 
@@ -38,12 +38,55 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
         /* 
-            $('video').get(n) ~ 비디오 참조 (단, n = 0, 1, 2, ...)
+            $('video').get(n) ~ 비디오 참조 (단, n = 0, 1, 2, ...) 이렇게 참조 해야만 쓸수잇음. 
             $('video').get(n).load() ~ 비디오 불러오기
             $('video').get(n).play() ~ 비디오 재생하기
             $('video').get(n).pause() ~ 비디오 불러오기
         */
 
+        /* 
+        문제 : 
+
+            load 버튼을 클릭하면
+            비디오를 처음으로 저장한다. 
+
+            play 버튼을 클릭하면
+            비디오 실행한당.
+
+            pause 버튼을 클릭하면
+            비디오를 일시정지 시킨다.
+
+
+            이벤트 : click
+            메서드 : .load()/ play()/ .pause()
+        */
+
+        // 이벤트 메서드의 매개변수는 함수 
+        
+        const vid =  $('video').get(0);
+
+        
+        // load 버튼을 클릭하면
+        $('.load').click(function(){
+            // 비디오를 처음으로 저장한다. 
+            vid.load();
+        });
+
+
+        // play 버튼을 클릭하면
+        $('.play').click(function(){
+            // 비디오 실행한당.
+            vid.play();
+
+        });
+
+
+        // pause 버튼을 클릭하면
+        $('.pause').click(function(){
+            //비디오를 일시정지 시킨다.
+            vid.pause();
+
+        });
 
     </script>
 </body>

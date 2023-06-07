@@ -24,6 +24,33 @@
             e.pageY ~ 브라우저상 마우스 커서의 y축 좌표
         */
 
+        /* 
+           창 위에서 마우스를 이동하면 
+           마우스의 x좌표와 y좌표를 spen요소에 출력하시오. 
+        */
+
+        /* 
+            $(window) ~ BOM객체
+            $(document) ~ DOM객체
+            $(this) ~ this는 키워드라 
+            이 모두를 ''로 묶지않음.
+
+            속성: pageX / pageY는 자바의 속성이다.
+            하단 e.pageX / e.pageY 의 .e는 이벤트의 e이다. 
+            
+        */
+
+        //창 위에서 마우스를 움직이면 함수를 실행한다.    
+        $(window).mousemove(function(e){
+            //.posX에 마우스의 x좌표를 문자열로 지정하고 실행 
+            let mouseX = e.pageX;
+            $('.posX').text(mouseX);
+            
+            // 마우스의 y좌표
+            //.posY에 마우스의 Y좌표를 문자열로 지정하고 실행 
+            let mouseY = e.pageY;
+            $('.posY').text(mouseY);
+        });
 
     </script>
 </body>
