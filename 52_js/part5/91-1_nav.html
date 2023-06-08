@@ -56,6 +56,7 @@
 
         .main {
             display: flex;
+            width: auto;
         }
 
         .main>li {
@@ -158,21 +159,12 @@
         //네비게이션
         // 메인메뉴 안에 있는 li에 마우스를 올리면 함수 실행한다 
         $(".main > li").mouseenter(function () {
-
-
-            //마우스가 올라간 메인메뉴 li의 자식인 .sub가 슬라이드로 내려온다. 
-
-            //마우스가 올라간 만큼 효과(슬라이드)가 둠칫 거리기 때문에 .stop으로 이전 동작을 멈추게 한다. 
-            //효과 메서드 앞에만 붙일수잇음. 
-            //효과 메서드 : hide(), show(),fadeIn(),fadeOut(), slideDown(), slideUp(), animate()...
-            $(this).children(".sub").stop().slideDown();
+            $('.sub').stop().slideDown();
         });
 
 
-        // 메인메뉴 li에서 마우스가 벗어나면 함수를 실행한고얌.
         $(".main > li").mouseleave(function () {
-            // 마우스가 벗어난 li의 자식 .sub가 슬라이드로 올라간다. 아래에서 위로 사라진다는 뜻.
-            $(this).children(".sub").stop().slideUp();
+            $('.sub').stop().slideUp();
         });
 
     </script>
