@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내비게이션</title>
+
+
+    <style>
+        @charset "utf-8";
+
+        /* 공통 */
+        * {
+            margin: 0;
+            padding: 0;
+            /* 패딩이나 보더 줄때 박스 안에 적용되게 하려고 */
+            box-sizing: border-box;
+        }
+        
+        html {
+            font-size: 10px;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        
+
+        /* rem단위는 html에서 지정한 글자 크기의 배수단위 
+        1.4rem이라고 한다면 10px의 10헤에...  */
+        body {
+            font-size: 14px;
+            background: #fff;
+            color: #333;
+        }
+        
+        
+        
+        nav {
+            /* 창 기준으로 원하는 곳에 배치하기 위해...  */
+            /* position: absolute;
+            top: 35px;
+            left:0px;
+            z-index: 1; */
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            
+        }
+        .nav_bg{
+            position: absolute;
+            top: 32px;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 102, 173, 0.5);
+            /* 얘가 젤 앞에 있어서 -1해서 뒤로 보내주면 호버 작동 잘 함 */
+            z-index: -1;
+        
+        }
+
+        /* 1depth 라고 부름*/
+
+        .main {
+            display: flex;
+            background: #0066ad;
+            height: 34px;
+            justify-content: center;
+        }
+
+        .main>li {
+            /* float: left; */
+            /* li의 한 칸의 너비를 150px로 설정한것 */
+            width: 150px;
+        }
+
+        /* 메인+ 서브메뉴 모두
+            a태그 전체를 색 바꾼 것. */
+        .main>li a {
+            /* a의 기본은 인라인이라 글자 크기의 영역만 잇음.
+            박스의 영역이 가득 차는건 블록임
+            블록은 기본으로 width가 100%이기 때문. */
+            display: block;
+            color: #fff;
+        }
+
+        /* 메인메뉴만 해당
+            메인 안의 li안의 a만 해당 */
+        .main>li>a {
+            /* em은 부모크기 영향  */
+            display: block;
+            font-size: 1.8rem;
+            font-weight: bold;
+            padding: 5px;
+
+        }
+
+        .main>li a:hover {
+            background: #30a3f3;
+            color: #333;
+        }
+
+        /* 2depth 라고부름*/
+        .sub {
+            /* 이렇게 설정하면 서브 숨기기 가능 */
+            display: none;
+        }
+
+        .sub li a {
+            padding: 4px 8px;
+            color: #333;
+            line-height: 2;
+        }
+
+        .sub li a:hover {
+            background-color: #337bad;
+            color: white;
+        }
+
+        .sub li:first-child {
+            padding-top: 10px;
+        }
+
+        .sub li:last-child {
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav_bg"></div>
+        <ul class="main">
+            <li><a href="#">강원천문대</a>
+                <ul class="sub">
+                    <li><a href="#">천문대소개</a></li>
+                    <li><a href="#">인사말</a></li>
+                    <li><a href="#">오시는길</a></li>
+                </ul>
+            </li>
+            <li><a href="#">이용안내</a>
+                <ul class="sub">
+                    <li><a href="#">프로그램</a></li>
+                    <li><a href="#">관람시간표</a></li>
+                    <li><a href="#">이달의 별자리</a></li>
+                </ul>
+            </li>
+            <li><a href="#">천문대예약</a>
+                <ul class="sub">
+                    <li><a href="#">예약하기</a></li>
+                    <li><a href="#">예약확인</a></li>
+                    <li><a href="#">예약취소</a></li>
+                </ul>
+            </li>
+            <li><a href="#">커뮤니티</a>
+                <ul class="sub">
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">방문후기</a></li>
+                    <li><a href="#">자유게시판</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- 제이쿼리 라이브러리 파일을  CDN방식으로 연결해야 스크립트가 돌아간다. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        //네비게이션
+        // 메인메뉴 안에 있는 li에 마우스를 올리면 함수 실행한다 
+
+    $('.main > li').mouseenter(function(){
+        $('.sub').stop().slideDown();
+        $('.nav_bg').stop().animate({height:150});
+    });
+    $('nav').mouseleave(function(){
+        $('.sub').stop().slideUp();
+        $('.nav_bg').stop().animate({height:0});
+    });
+
+    </script>
+
+</body>
+
+</html>

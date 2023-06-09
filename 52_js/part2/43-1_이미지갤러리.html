@@ -13,8 +13,9 @@
     <div id="galleryZone">
         <p>
             <!-- 인라인 스크립트 -->
-            <button onclick="gallery(0);">이전</button>
-            <button onclick="gallery(1);">다음</button>
+            <!-- onclick이란 html의 이벤트 속성 -->
+            <button class="btn1" onclick="gallery(0);">이전</button>
+            <button class="btn2" onclick="gallery(1);">다음</button>
         </p>
         <p><img src="../assets/pic_1.jpg" alt="" id="photo"></p>
     </div>
@@ -35,22 +36,38 @@
                 var 변수 = 함수명();
         */
 
-        var num = 1;
+        const btn1 = document.querySelector('.btn1');
+        const btn2 = document.querySelector('.btn2');
+        let num = 1;
+
+        btn1.onclick = imgFn1;
+        btn2.onclick = imgFn2;
+
+        function imgFn1() {
+            gallery(0);
+        }
+        function imgFn2() {
+            gallery(1);
+        }
+
+
         function gallery(direct) {
             if (direct) {
-                if (num == 8) return; //8번째에서 멈춤. 
+                if (num == 8) return; //num이 8과 같으면 함수정료. 8번째에서 멈춤. 
+                //num을 1씩 증가
                 num++;
             } else {
                 if (num == 1) return; //1번째에서 더 뒤로 못감. 
+                //num을 1씩 감소
                 num--;
             }
 
-            var imgTag = document.getElementById('photo');
+            let imgTag = document.getElementById('photo');
             imgTag.setAttribute('src', '../assets/pic_' + num + '.jpg');
             // imgTag.setAttribute('src', '../assets/pic_1.jpg'); 숫자만 변수처리 해줌. 
         }
 
-        /* 
+        /*
             //자바의 기본형식 다시보기
             객체.메서드();
             document.write();

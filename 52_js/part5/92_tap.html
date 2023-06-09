@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭</title>
+
+
+    <style>
+        /* 바디 안의 모든 요소들에게 */
+        /* body * {
+            outline: 1px solid red;
+        } */
+
+        li{
+            text-decoration: none;
+            list-style: none;
+        }
+
+        .tab {
+            width: 420px;
+            position: relative;
+        }
+
+        .tabBtn {
+            /* 버튼을 가로배치. */
+            display: flex;
+        }
+
+        .tabBtn li {
+            padding: 4px 12px;
+            background: #0066ad;
+            cursor: pointer; /* 마우스 올렸을때 손가락 모양 나오게 하는거 */
+            color: #fff;
+        }
+
+        .tabBtn li.on {
+            background: pink;
+        }
+
+        .tabCont {
+            /* 두개의 컨텐츠는 겹친다. 탭 1, 2를 겹치게 */
+            position: absolute;
+            /* (1)냅다 다 숨겨 일단. */
+            display: none;
+            background: pink;
+            padding: 0 24PX;
+        }
+
+        /* (2) 이제 탭의 첫 번째 자식만 보여줘 */
+        .tabCont:first-of-type{
+            display: block;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="tab">
+        <!-- 버튼이 될 내용 -->
+        <ul class="tabBtn clearfix">
+            <li class="on">탭1</li>
+            <li>탭2</li>
+            <li>탭3</li>
+            <li>탭4</li>
+        </ul>
+        <!-- 버튼 누르면 동작 될 내용 -->
+        <div class="tabCont tab1">
+            <h2>탭의 첫 번째 내용</h2>
+            <p>탭1을 클릭하면 탭2의 내용을 숨기고, 탭2를 클릭하면 탭1 내용을 숨긴다.</p>
+        </div>
+        <div class="tabCont tab2">
+            <h2>탭의 두 번째 내용</h2>
+            <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat asperiores nulla sunt aliquam eos nihil esse odit rerum enim! Veniam quidem hic repellat reprehenderit consequatur atque earum ipsa, temporibus neque. </p>
+        </div>
+        <div class="tabCont tab3">
+            <h2>탭의 세 번째 내용</h2>
+            <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat asperiores nulla sunt aliquam eos nihil esse odit rerum enim! Veniam quidem hic repellat reprehenderit consequatur atque earum ipsa, temporibus neque. </p>
+        </div>
+        <div class="tabCont tab4">
+            <h2>탭의 네 번째 내용</h2>
+            <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat asperiores nulla sunt aliquam eos nihil esse odit rerum enim! Veniam quidem hic repellat reprehenderit consequatur atque earum ipsa, temporibus neque. </p>
+        </div>
+    </div>
+
+    <!-- 제이쿼리 라이브러리 파일을  CDN방식으로 연결해야 스크립트가 돌아간다. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        // 탭 메뉴 
+        //.tqb 의 li를 클릭하면 함수를 실행한다.
+    $(".tabBtn li").click(function () {
+        // 클릭한 li의 인텍스 번호 (순번: 0 1 2 ...)를 가져와서 i에 저장한다.
+        //탭 1번을 클릭하면 인덱스 번호는 0이다. 0부터 시작하기때문. 
+        //탭 2는 1번이겟지. ㅇㅋ? 
+        let i = $(this).index();
+
+
+        //.tabCont의 내용은 모두 숨긴다. 
+        // 모든 버튼의 on클래스 제거
+        $('.tabBtn li').removeClass('on');
+        $(".tabCont").css({ display: "none"});
+        //.tabCont 중에서 ep(i)에 해당되는 내용은 보이게 한다.
+        //            ep(i) = 몇번째 보여줄거니
+        $(".tabCont").eq(i).css({display: "block"});
+        //버튼 중 클릭한 버튼만 on클래스 추가
+        $(this).addClass('on');
+    });
+
+    </script>
+
+</body>
+
+</html>
